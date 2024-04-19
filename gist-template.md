@@ -20,7 +20,6 @@ This gist focuses on how the following regex works, validating FINISH
 - [Grouping and Capturing](#grouping-and-capturing)
 - [Bracket Expressions](#bracket-expressions)
 - [Greedy and Lazy Match](#greedy-and-lazy-match)
-- [Boundaries](#boundaries)
 - [Back-references](#back-references)
 - [Look-ahead and Look-behind](#look-ahead-and-look-behind)
 
@@ -45,7 +44,12 @@ The following quantifiers are used in this regex, primarily for validating vario
 
 ### OR Operator
 
+The OR Operator is used throughout this regex to separate different credit card companies based on the patterns of each specific card type.
+
 ### Character Classes
+
+Most character classes are bracket expressions, which will be discussed in a following section. 
+- '\d' indicates any digit between 0 and 9 (same as the bracket expression '[0-9]')
 
 ### Flags
 
@@ -53,9 +57,12 @@ The following quantifiers are used in this regex, primarily for validating vario
 
 ### Bracket Expressions
 
-### Greedy and Lazy Match
+- '[0-9]' matches any digit between 0 and 9
+- '[1=5]' is used for the MasterCard validation to ensure the card number begins with a digit between 1 and 5.
+- '[0-5]' is used for the Diner's Club validation to ensure the third digit of the card number is 0-5. In the context of the code, this ensures the card numubers begin 300-305.
+- '[68]' is used for the Diner's Club validation to ensure a valid third digit for nubmers that begin '36' or '38'.
 
-### Boundaries
+### Greedy and Lazy Match
 
 ### Back-references
 
