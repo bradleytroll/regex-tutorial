@@ -19,8 +19,6 @@ This gist focuses on how the following regex works, validating FINISH
 - [Grouping and Capturing](#grouping-and-capturing)
 - [Bracket Expressions](#bracket-expressions)
 - [Greedy and Lazy Match](#greedy-and-lazy-match)
-- [Back-references](#back-references)
-- [Look-ahead and Look-behind](#look-ahead-and-look-behind)
 
 ## Regex Components
 
@@ -66,9 +64,13 @@ Most character classes are bracket expressions, which will be discussed in a fol
 
 ### Greedy and Lazy Match
 
-### Back-references
-
-### Look-ahead and Look-behind
+- Greedy Quantifiers
+    - '[0-9]{12}' is used for Visa validation is greedy, matching exactly 12 digits.
+    - '[0-9]{14}' is used for Mastercard validation is greedy, matching exactly 14 digits.
+    - '[0-9]{13}' is used for American Express validation is greedy, matching exactly 13 digits.
+    - '[0-9]{11}' is used for Diner's Club validation is greedy, matching exactly 11 digits.
+- Lazy Quantifiers
+    - '[0-9]{3}?' is used for the optional trailing digits in the Visa validation pattern. The '?' makes the quantifier lazy, matching between 0 and 3 digits, making this group of digits optional, allowing for the card number to be either 13 or 16 digits. 
 
 ## Author
 
