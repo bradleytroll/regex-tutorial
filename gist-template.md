@@ -16,7 +16,6 @@ This gist focuses on how the following regex works, validating FINISH
 - [Quantifiers](#quantifiers)
 - [OR Operator](#or-operator)
 - [Character Classes](#character-classes)
-- [Flags](#flags)
 - [Grouping and Capturing](#grouping-and-capturing)
 - [Bracket Expressions](#bracket-expressions)
 - [Greedy and Lazy Match](#greedy-and-lazy-match)
@@ -51,9 +50,12 @@ The OR Operator is used throughout this regex to separate different credit card 
 Most character classes are bracket expressions, which will be discussed in a following section. 
 - '\d' indicates any digit between 0 and 9 (same as the bracket expression '[0-9]')
 
-### Flags
-
 ### Grouping and Capturing
+
+- '(?:4[0-9]{12}(?:[0-9]{3})?)' groups the validation pattern for Visa cards. The outer parentheses capture the full match, while the inner '?:' are non-capturing groups. The final non-capturing group supports both 13 and 16 digit card numbers.
+- '(?:0[0-5]|[68][0-9])' groups the validation patthern for Diner's Club cards that begin with '30' and are followed by a number from 0 to 5 or begin with '36' or '38' followed by any number. 
+- '(?:011|5[0-9]{2})' groups the validation pattern for Disover cards that begin with '6011' or '65' followed by any two numbers.
+- '(?:2131|1800|35\d{3})' groups the validation pattern for JCB cards that begin with '2131', '1800', or '35' followed by any three numbers.
 
 ### Bracket Expressions
 
