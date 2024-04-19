@@ -1,6 +1,6 @@
 # Credit Card Number Validation Regex 
 
-FINISH
+A quick regex code to verify credit card numbers for various card types/companies. 
 
 ## Summary
 
@@ -30,10 +30,10 @@ The '^' anchor indicates the beginning of a string, while the '?' anchor indicat
 
 The following quantifiers are used in this regex, primarily for validating various types of credit cards:
 - Visa Validation
-    - '{12}' indicates there should be exactly 12 occurances of the preceding element '[0-9]', verifyting the number length.
-    - '{3})?' the use of the '?' indicates the three numbers specified by '[0-9]{3}' may or may not be present, allowing for numbers both 13 and 16 digits long. 
+    - `{12}` indicates there should be exactly 12 occurances of the preceding element '[0-9]', verifyting the number length.
+    - `{3})?` the use of the '?' indicates the three numbers specified by '[0-9]{3}' may or may not be present, allowing for numbers both 13 and 16 digits long. 
 - MasterCard Validation
-    - '{14}' indicates there should be exactly 14 occurances of the preceding element '[0-9]', ensuring a 16-digit number that begins with 51-55.
+    - `{14}` indicates there should be exactly 14 occurances of the preceding element '[0-9]', ensuring a 16-digit number that begins with 51-55.
 - American Express Validation
     - '{13}' indiciates there should be exactly 13 occurances of '[0-9]', ensuring a 15-digit card number.
 - Diner's Club Validation
