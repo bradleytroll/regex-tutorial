@@ -1,14 +1,14 @@
-# Title (replace with your title)
+# Credit Card Number Validation Regex 
 
-Introductory paragraph (replace this with your text)
+FINISH
 
 ## Summary
+
+This gist focuses on how the following regex works, validating FINISH
 
 ```
 /^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|6(?:011|5[0-9]{2})[0-9]{12}|(?:2131|1800|35\d{3})\d{11})$/
 ```
-
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
 
 ## Table of Contents
 
@@ -28,7 +28,13 @@ Briefly summarize the regex you will be describing and what you will explain. In
 
 ### Anchors
 
+The '^' anchor indicates the beginning of a string, while the '?' anchor indicates the end. The search will include the entire string within these anchors. 
+
 ### Quantifiers
+
+The following quantifiers are used in this regex, primarily for validating various types of credit cards:
+- Visa Validation
+    - '{12}' indicates there should be exactly 12 occurances of the preceding element '[0-9]', verifyting a 16 digit number.
 
 ### OR Operator
 
